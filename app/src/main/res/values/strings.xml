@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">uploader</string>
+
+    <string-array name="doc_types">
+        <item>.image</item>
+        <item>.pdf</item>
+    </string-array>
+
+</resources>

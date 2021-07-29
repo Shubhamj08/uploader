@@ -1,0 +1,3 @@
+include ':uploadlibrary'
+include ':app'
+rootProject.name = "uploader"

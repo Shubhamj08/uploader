@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "344452258965",
+    "project_id": "uploader-c4b93",
+    "storage_bucket": "uploader-c4b93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344452258965:android:f8ec5764ca411665da4f9c",
+        "android_client_info": {
+          "package_name": "com.shubham.uploader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344452258965-otr709lrhm59qou09ip6bj0c44b3b4b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkW-GEpswcJ9XZP5ziLcMnwCOEwDR-Bos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344452258965-otr709lrhm59qou09ip6bj0c44b3b4b9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
