@@ -17,6 +17,10 @@ class UploadDoc(context: Context) {
             progressDialog?.dismiss()
             showDialog("Success", "Your document is successfully uploaded!!!")
         }
+            .addOnFailureListener{
+                progressDialog?.dismiss()
+                showDialog("Error", "Some error occurred! Make sure your internet connection is okay!!")
+            }
     }
 
     fun showDialog(title: String, message: String){

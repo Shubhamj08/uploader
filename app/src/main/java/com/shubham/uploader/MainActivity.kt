@@ -7,6 +7,8 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.textfield.TextInputLayout
+import com.google.android.material.textview.MaterialTextView
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.shubham.uploadlibrary.UploadDoc
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var progressDialog: AlertDialog
     private lateinit var spinner: Spinner
     private lateinit var name: EditText
+    private lateinit var nameField: TextInputLayout
     private val UPLOAD_DOC = 1
 
     val uploader = UploadDoc(this)
@@ -27,6 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         uploadButton = findViewById(R.id.uploadButton)
         name = findViewById(R.id.nameText)
+        nameField = findViewById(R.id.nameField)
 
         storageRef = FirebaseStorage.getInstance().reference
 
@@ -53,9 +57,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         uploadButton.setOnClickListener {
-            val intent: Intent = Intent(Intent.ACTION_GET_CONTENT)
-            intent.type = "image/*, application/pdf"
-            startActivityForResult(intent, UPLOAD_DOC)
+
+            if(name.text.toString().isEmpty()){
+                nameField.error = getString(R.string.enter_username)
+            }
+            else{
+                nameField.error = null
+                val intent = Intent(Intent.ACTION_GET_CONTENT)
+                intent.type = "image/*, application/pdf"
+                startActivityForResult(intent, UPLOAD_DOC)
+            }
         }
 
     }

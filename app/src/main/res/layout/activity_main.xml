@@ -5,21 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#f8f8f8"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:orientation="vertical"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="24dp"
-        android:background="@color/purple_200"
-        android:elevation="2dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="24dp"
+        android:background="@color/purple_200">
 
         <TextView
             android:layout_width="match_parent"
@@ -34,12 +38,13 @@
             android:id="@+id/nameField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name">
+            android:hint="username">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nameText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                tools:text="username"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            tools:listheader="something" />
+            tools:listheader="something"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/uploadButton"
@@ -62,5 +67,6 @@
             android:text="Upload" />
 
     </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
