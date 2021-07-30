@@ -4,5 +4,4 @@
 ---
 ### dependencies:
 #### material design
-#### firebase storage
 #### uploader library
