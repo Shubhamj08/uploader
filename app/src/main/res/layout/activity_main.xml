@@ -62,19 +62,23 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/uploadButton"
-                android:textColor="@color/black"
-                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="15sp"
-                android:paddingVertical="10sp"
-                app:cornerRadius="10dp"
-                app:backgroundTint="@color/color_accent"
-                app:rippleColor="@color/orange_500"
                 android:layout_gravity="right"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="Upload" />
+                android:paddingHorizontal="15sp"
+                android:paddingVertical="10sp"
+                android:text="Upload"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:backgroundTint="@color/color_accent"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/ic_baseline_cloud_upload_24"
+                app:iconGravity="end"
+                app:iconTint="@color/black"
+                app:iconSize="25sp"
+                app:rippleColor="@color/orange_500" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
